@@ -7,8 +7,17 @@ export interface Todo {
   updatedAt: Date;
 }
 
-export interface TodoFolder {
+export interface TodoFile {
   id: string;
   name: string;
   todos: Todo[];
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface TodoFolder {
+  id: string;
+  name: string;
+  files: TodoFile[];
+  isExpanded?: boolean;
 }
